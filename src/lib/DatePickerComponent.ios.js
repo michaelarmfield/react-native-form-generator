@@ -18,7 +18,7 @@ export class DatePickerComponent extends React.Component{
   setDate(date){
     this.setState({date:date});
     if(this.props.onChange)      this.props.onChange((this.props.prettyPrint)?this.props.dateTimeFormat(date):date);
-    if(this.props.onValueChange) this.props.onValueChange(date);
+    // if(this.props.onValueChange) this.props.onValueChange(date);
   }
   handleLayoutChange(e){
     let {x, y, width, height} = {... e.nativeEvent.layout};
@@ -32,7 +32,7 @@ export class DatePickerComponent extends React.Component{
     this.setState({date:date});
 
     this.props.onChange && this.props.onChange((this.props.prettyPrint)?this.props.dateTimeFormat(date, this.props.mode):date);
-    // this.props.onValueChange && this.props.onValueChange(date);
+    this.props.onValueChange && this.props.onValueChange(date);
 
   }
 
