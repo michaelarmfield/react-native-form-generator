@@ -32,7 +32,7 @@ export class DatePickerComponent extends React.Component{
     this.setState({date:date});
 
     this.props.onChange && this.props.onChange((this.props.prettyPrint)?this.props.dateTimeFormat(date, this.props.mode):date);
-    this.props.onValueChange && this.props.onValueChange(date);
+    // this.props.onValueChange && this.props.onValueChange(date);
 
   }
 
