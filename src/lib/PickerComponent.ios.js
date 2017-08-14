@@ -95,6 +95,10 @@ export class PickerComponent extends React.Component{
         onValueChange={this.handleValueChange.bind(this)}
         mode='dropdown'
         >
+        <PickerItem
+          value={null}
+          label={"None"}
+        />
         {Object.keys(this.props.options).map((value) => (
           <PickerItem
             key={value}
